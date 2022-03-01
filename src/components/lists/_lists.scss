@@ -1,0 +1,25 @@
+@use "../../scss" as *;
+
+.grocery-lists {
+  .grocery-item {
+    @include flex(center, space-between);
+    margin-bottom: 8px;
+    padding: 4px 16px;
+    color: $text-color;
+  }
+
+  .btn-trash,
+  .btn-edit {
+    background-color: $white;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+  }
+  .btn-trash {
+    color: $red;
+  }
+
+  .btn-edit {
+    color: $green;
+  }
+}

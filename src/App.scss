@@ -1,5 +1,79 @@
 @use "./scss" as *;
+@use "./components/lists";
+@use "./components/alerts";
+
+body {
+  background-color: #ebf7ff;
+}
 .App {
   text-align: center;
   height: 100%;
+  width: 90vw;
+  max-width: 35rem;
+  margin: 8rem auto 0;
+  background-color: $white;
+  padding: 2rem;
+  box-shadow: 5px 5px 10px rgb(0 0 0 / 10%);
+  border-radius: $radius;
+
+  h3 {
+    color: $dark-blue;
+    font-size: 1.75rem;
+    margin-bottom: 24px;
+  }
+  ::selection {
+    color: $blue;
+  }
+
+  .form-control {
+    @include flex(center, center);
+    height: 30px;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.25rem 0.25rem 0.25rem 1rem;
+    border: 1px solid rgb(252, 245, 245);
+    background-color: $light-gray;
+    height: 100%;
+    font-size: 1rem;
+    color: $text-color;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    outline: none;
+  }
+  ::placeholder {
+    color: $text-color;
+    opacity: 1;
+  }
+
+  .submit-btn {
+    height: 100%;
+    padding: 0.25rem 1rem;
+    border: none;
+    background: $blue;
+    font-size: 13.6px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+    cursor: pointer;
+    &:hover {
+      color: $white;
+      background-color: #2d87c8;
+    }
+  }
+}
+
+.grocery-container {
+  margin-top: 30px;
+
+  .clear {
+    border: none;
+    background-color: $red;
+    color: $white;
+    font-size: 0.9rem;
+    padding: 5px 15px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
 }
